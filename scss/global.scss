@@ -1,0 +1,222 @@
+// IMPORTS
+@import 'bootstrap.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+// MIXINS
+@mixin lime-green-background {
+	background-color: $lime-green;
+	color: $white;
+}
+
+@mixin marginless-padding {
+	margin: 0;
+	padding: 10px;
+} 
+
+// HTML ELEMENTS
+h1 {
+	font-weight: 800;
+}
+
+h2 {
+	font-size: 1.6em;
+}
+
+h4 {
+	font-size: 1em;
+	font-weight: 200;
+}
+
+p {
+	font-size: 0.85em;
+	line-height: 180%;
+}
+
+img {
+	padding-bottom: 10px;
+}
+
+footer {
+	background-color: $turquoise;
+
+	a {
+		color: $white;
+		// font-family: 'Lato', sans-serif;
+
+		&:hover, &:active {
+			color: $text-color;
+			text-decoration: none;
+		}
+
+		&:visited {
+			text-decoration: none;
+			color: $white;
+		}
+	}
+	
+}
+
+// CLASSES
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+
+.vertically-center-children {
+	display: flex;
+  	align-items: center;
+}
+
+.col-circle {
+	padding: 40px 0px 40px 0px;
+}
+
+.outer-circle {
+	width: 400px;
+  	height: 400px;
+  	background-color: $lime-green-light;
+	border-radius: 50%;
+	color: $lime-green;
+  	text-align: center;
+  	position: relative;
+}
+
+.inner-circle {
+	width: 150px;
+  	height: 150px;
+  	background-color: $white;
+	border-radius: 50%;
+
+	position: absolute;
+	top: 125px;
+	left: 125px;
+}
+
+.icon-row-top {
+	padding-top: 15%;
+}
+
+.icon-row-middle {
+	padding-top: 15%;
+}
+
+.icon-row-bottom {
+	padding-top: 10%;
+}
+
+.lime-green-background-class {
+	background-color: $lime-green;
+	color: $white;
+	@include marginless-padding;
+}
+
+.lime-green-light-background-class {
+	background-color: $lime-green-light;
+	@include marginless-padding;
+}
+
+.turquoise-background {
+	background-color: $turquoise;
+	color: $white;
+	@include marginless-padding;
+}
+
+.turquoise-light-background {
+	background-color: $turquoise-light;
+	@include marginless-padding;
+}
+
+.turquoise-text {
+	color: $turquoise;
+}
+
+.navbar-default {
+	@include lime-green-background;
+}
+
+.lets-get-cooking {
+	color: $white;
+	background-color: $turquoise;
+	min-height: 150px;
+	text-align: center;
+	padding-top: 4%;
+}
+
+.recipes {
+	color: $white;
+	font-size: 1em;
+	font-weight: 100;
+	background-color: $turquoise-light;
+	padding: 15px 15px 10px 20px;
+}
+
+.specials-titles {
+	color: $turquoise;
+}
+
+.restaurants {
+	background-color: $lime-green-light;
+}
+
+.restaurants-title {
+	@include lime-green-background;
+	min-height: 150px;
+	text-align: center;
+	padding-top: 4%;
+}
+
+.img-description {
+	background-color: black;
+	color: $white;
+	opacity: .8;
+	position: absolute;
+	bottom: 10px;
+	left: 15px;
+	padding: 0;
+	margin: 0;
+	width: 89%;
+	opacity: 0;
+	-webkit-transition: opacity 500ms;
+  	-moz-transition: opacity 500ms;
+	-o-transition: opacity 500ms;
+  	transition: opacity 500ms;
+
+	&:hover {
+		opacity: .8;
+		-webkit-transition: opacity 500ms;
+	  	-moz-transition: opacity 500ms;
+	  	-o-transition: opacity 500ms;
+	  	transition: opacity 500ms;
+	}
+
+	p {
+		padding: 10px 10px 5px 15px;
+	}
+}
+
+.image-credits {
+	font-size: .6em;
+}
+
+.footer-text {
+	padding: 10px 20px 10px 10px;
+	color: $white;
+}
+
+.copyright-text {
+	font-size: .7em;
+	font-weight: 100;
+}
+
+// IDS
+#chef-img {
+	border-bottom: 1px $turquoise solid;
+	padding-bottom: 0;
+}
+
+#plus-sign {
+	font-size: 3em;
+}
